@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <!-- Google analytics -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N9LC24MM');</script>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>우리 반 짤 모음</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS -->
+    <script src="gif_data.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <script>
+        function downloadGIF(filename, downloadName) {
+            let anchor = document.createElement('a');
+            anchor.style.display = 'none';
+            document.body.appendChild(anchor);
+
+            anchor.href = filename;
+            anchor.setAttribute('download', downloadName);
+
+            anchor.click();
+
+            document.body.removeChild(anchor);
+        }
+    </script>
+    
+    <div class="container">
+        <h1 class="title">우리 반 짤 모음</h1>
+        <div class="subtitle">:)</div>
+
+        <br>
+
+        <input type="text" id="searchInput" class="search-input" placeholder="검색">
+
+        <br>
+
+        <button class="download-all-button">모두 저장</button>
+    </div>
+
+    <div class="container" id="gif-container"></div>
+</body>
+
+<!-- Google analytics -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9LC24MM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</html>
